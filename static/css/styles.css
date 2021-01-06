@@ -1,0 +1,109 @@
+body{
+    height: 100%;
+    min-height: 200vh;
+    width: 100%;
+    margin:0px;
+    margin-top:60px;
+    padding: 0px;
+    font-style: normal;
+    line-height: 1.5;
+    text-size-adjust: 100%;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+nav{
+    display: flex;
+    position: fixed;
+    top:0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;    
+    min-height: 70px;
+    padding-left: 1rem;
+    padding-left: 1rem;
+    padding: 0 2rem;
+    margin-right: auto;
+    margin-left: auto;     
+    letter-spacing: 1px;
+    background-color: black;
+
+    z-index: 100%;
+    word-break: break-word;
+    font: inherit;
+}
+.left-links{
+    flex:1 1 200px;
+}
+.right-links{
+    padding: 70px 2rem 1rem;
+}
+.links, .links-hidden{
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bolder;
+    position: relative;
+}
+.menu-btn {
+    font-size: 18px;
+    font-weight: bolder;
+    display: inline-block;
+    text-align: center;
+    background-color: #040008;
+    color: white;
+    padding: 20px;
+    font-family: inherit;
+    border: none;
+    width: 100%;
+}
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-menu:hover .menu-content {
+    display: block;
+}
+
+/* Style the footer */
+footer #footers{
+    background-color:black;
+    opacity: 0.8;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+    color: white;
+    position: fixed;
+}
+#last-test{
+    margin-bottom: 10px;
+}
+
+/*Home page*/
+.home-page{
+    margin-top: 200px;
+    width: 100%;
+    height: 100vh;
+}

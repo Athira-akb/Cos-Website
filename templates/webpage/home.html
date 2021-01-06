@@ -1,0 +1,96 @@
+{% extends "webpage/base.html" %}
+{% load static %}
+
+{% block extra_css %}  
+    <link rel="stylesheet" href="{% static 'css/styles_home.css' %}" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+    <section class="about-container">
+        <h2 class="about-content">COSE</h2>
+        <p class="about-content">This will provide a brief introduction about the company, its moto, or quotation.</p>
+        <h3 class="about-content">Quatation1</h3>
+        <p class="about-content">A few lines</p>
+        <h3 class="about-content">Quatation2</h3>
+        <p class="about-content">A few lines</p>
+    </section>
+    <div class="workforce-home">
+        <div class="workforce">
+            <div class="workforce-column">
+                <h2>Head</h2>
+                <p>A few words about them.</p>
+            </div>
+            <div class="workforce-column">
+                <div class="slide-container">
+                    <div class="Slide">
+                        <img src="{% static 'images/ceo1.jpg' %}" alt="Sundar Pichari" style="width:100%">
+                        <div class="caption">Sundar Pichai</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="{% static 'images/ceo2.jpg' %}" alt="Jeff Bross" style="width:100%">
+                        <div class="caption">Jeff Bezos</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="{% static 'images/ceo3.jpg' %}" alt="Bill Gates" style="width:100%">
+                        <div class="caption">Photo 3</div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    </div>
+                        <a class="prevBtn">❮</a>
+                        <a class="nextBtn">❯</a>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="Navdot" onclick="currentSlide(1)"></span>
+                    <span class="Navdot" onclick="currentSlide(2)"></span>
+                    <span class="Navdot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="online-courses">
+        <h2 style="text-align: center;">Courses we offer</h2>
+        <div class="course-row">
+            <div class="courses-r1">
+                <h3>Heading 1</h3>
+                <p>A brief discription about the topic.</p>
+            </div>
+            <div class="courses-r1">
+                <h3>Heading 2</h3>
+                <p>A brief discription about the topic.</p>
+            </div>
+            <div class="courses-r1">
+                <h3>Heading 3</h3>
+                <p>A brief discription about the topic.</p>
+            </div>
+        </div>
+        <div class="course-row">
+            <div class="courses-r2">
+                <h3>Heading 4</h3>
+                <p>A brief discription about the topic.</p>
+            </div>
+            <div class="courses-r2">
+                <h3>Heading 5</h3>
+                <p>A brief discription about the topic.</p>
+            </div>
+            <div class="courses-r2">
+                <h3>Heading 6</h3>
+                <p>A brief discription about the topic.</p>
+            </div>
+        </div>       
+    </div>
+
+    <div class="about-section">
+        <h3>Company name</h3>
+        <p>Address</p>
+        <p>Email id</p>
+        <p>Phone number</p>
+        <p>Working hours</p>
+    </div>
+
+    <p style="text-align: center;">testing</p>
+    
+{% endblock %}

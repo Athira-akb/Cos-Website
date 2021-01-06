@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block extra_css %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+</head>
+<body>
+    <nav>
+        <div class="left-links">
+            <a class="links selected" href="#">COMPANY NAME</a>   
+        </div>
+        <div class="right-links">
+            <a class="links" href="#"> Products</a>
+            <a class="links" href="#"> Services</a>
+            <div class="dropdown-menu">
+                <button class="menu-btn"> Open </button>
+                <div class="menu-content">
+                    <a class="links-hidden" href="#">Contact Us</a>
+                    <a class="links-hidden" href="#">Visit Us</a>
+                    <a class="links-hidden" href="#">About Us</a>
+                </div>
+            </div>
+            <a class="links" href="#"> Account</a>
+            <a class="links" href="#"> Enterprise</a>
+        </div>
+    </nav>
+    <div class="home-page">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="last-test">
+        <p>hi there</p>
+    </div>
+
+    <footer>
+        <p id='footers'>Footer</p>
+    </footer>
+
+
+<script>
+        document.querySelector(".prevBtn").addEventListener("click", () => {
+       changeSlides(-1);
+    });
+    document.querySelector(".nextBtn").addEventListener("click", () => {
+       changeSlides(1);
+    });
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function changeSlides(n) {
+       showSlides((slideIndex += n));
+    }
+    function currentSlide(n) {
+       showSlides((slideIndex = n));
+    }
+    function showSlides(n) {
+       var i;
+       var slides = document.getElementsByClassName("Slide");
+       var dots = document.getElementsByClassName("Navdot");
+       if (n > slides.length) {
+          slideIndex = 1;
+       }
+       if (n < 1) {
+          slideIndex = slides.length;
+       }
+       Array.from(slides).forEach(item => (item.style.display = "none"));
+       Array.from(dots).forEach(
+          item => (item.className = item.className.replace(" selected", ""))
+       );
+       slides[slideIndex - 1].style.display = "block";
+       dots[slideIndex - 1].className += " selected";
+    }
+</script>
+    
+
+</body>
+</html>
